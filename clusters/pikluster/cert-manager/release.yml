@@ -5,18 +5,18 @@ metadata:
   namespace: cert-manager
 spec:
   interval: 10m0s
-  releaseName: cert-manager 
+  releaseName: cert-manager
   chart:
     spec:
-      chart: cert-mangaer 
-      version: '>=0.1.0'
+      chart: cert-mangaer
+      version: ">=0.1.0"
       sourceRef:
         kind: HelmRepository
         name: jetstack
         namespace: flux-system
       interval: 5m0s
   values:
-    installCRDs: false
+    installCRDs: true
     replicaCount: 3
     extraArgs:
       - --dns01-recursive-nameservers=1.1.1.1:53,9.9.9.9:53
