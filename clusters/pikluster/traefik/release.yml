@@ -17,7 +17,7 @@ spec:
       interval: 5m0s
   dependsOn:
     - name: metallb
-    - namespace: metallb-system
+      namespace: metallb-system
   values:
     globalArguments:
     - "--global.sendanonymoususage=false"
