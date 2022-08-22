@@ -18,10 +18,12 @@ spec:
     - match: Host(`longhorn.local.danielvignoles.com`)
       kind: Rule
       middlewares:
-        - name: longhorn-dashboard-basicauth
-          namespace: longhorn-system
+        - name: default-basic-auth
+          namespace: default
+        - name: default-headers
+          namespace: default
       services:
         - name: longhorn-frontend
           port: 80
-  tls:
-    secretName: local-danielvignoles-com-tls
+#  tls:
+#    secretName: local-danielvignoles-com-tls
