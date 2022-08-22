@@ -4,7 +4,7 @@ metadata:
   name: traefik
   namespace: traefik
 spec:
-  interval: 10m0s
+  interval: 60m
   releaseName: traefik
   chart:
     spec:
@@ -14,7 +14,7 @@ spec:
         kind: HelmRepository
         name: traefik
         namespace: flux-system
-      interval: 5m0s
+      interval: 30m
   dependsOn:
     - name: metallb
       namespace: metallb-system
