@@ -25,5 +25,6 @@ spec:
       services:
         - name: longhorn-frontend
           port: 80
-  tls:
-    secretName: local-danielvignoles-com-tls
+## default cert used in traefik namespace
+#  tls:
+#    secretName: local-danielvignoles-com-tls
