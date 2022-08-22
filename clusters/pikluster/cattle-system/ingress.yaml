@@ -17,6 +17,9 @@ spec:
           port: 80
     - match: Host(`rancher.local.danielvignoles.com`)
       kind: Rule
+      middlewares:
+        - name: default-headers
+          namespace: default
       services:
         - name: rancher
           port: 80
